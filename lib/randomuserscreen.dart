@@ -47,7 +47,7 @@ class _RandomUserScreenState extends State<RandomUserScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFEEF2F7), // Soft cool background
+      backgroundColor: const Color.fromARGB(255, 36, 80, 133), // Soft cool background
       body: SafeArea(
         child: Center(
           child: Padding(
@@ -77,7 +77,7 @@ class _RandomUserScreenState extends State<RandomUserScreen> {
                                   // Top section with image & name
                                   Container(
                                     width: double.infinity,
-                                    color: const Color(0xFF6C63FF),
+                                    color: const Color.fromARGB(116, 6, 0, 120),
                                     padding:
                                         const EdgeInsets.symmetric(vertical: 20),
                                     child: Column(
@@ -103,7 +103,7 @@ class _RandomUserScreenState extends State<RandomUserScreen> {
                                   // Bottom section with details
                                   Container(
                                     width: double.infinity,
-                                    color: Colors.white,
+                                    color: const Color.fromARGB(255, 147, 194, 255),
                                     padding: const EdgeInsets.all(20),
                                     child: Column(
                                       crossAxisAlignment:
@@ -139,8 +139,8 @@ class _RandomUserScreenState extends State<RandomUserScreen> {
                             icon: const Icon(Icons.refresh),
                             label: const Text("Load Another User"),
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: const Color.fromARGB(255, 10, 7, 81),
-                              foregroundColor: const Color.fromARGB(255, 133, 150, 163),
+                              backgroundColor: const Color.fromARGB(255, 14, 9, 141),
+                              foregroundColor: const Color.fromARGB(255, 203, 211, 216),
                               padding: const EdgeInsets.symmetric(
                                   horizontal: 30, vertical: 14),
                               shape: RoundedRectangleBorder(
@@ -170,7 +170,7 @@ class InfoTile extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(14),
       decoration: BoxDecoration(
-        color: const Color(0xFFF5F6FA),
+        color: const Color.fromARGB(255, 44, 149, 219),
         borderRadius: BorderRadius.circular(12),
       ),
       child: Row(
