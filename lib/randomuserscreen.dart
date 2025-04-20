@@ -47,7 +47,14 @@ class _RandomUserScreenState extends State<RandomUserScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 36, 80, 133), // Soft cool background
+      backgroundColor: const Color(0xFFF5F5F5), // Cerah dan moden
+      appBar: AppBar(
+        title: const Text("Random User Info Viewer"),
+        centerTitle: true,
+        backgroundColor: const Color(0xFF37474F), // Deep blue-grey
+        foregroundColor: Colors.white,
+        elevation: 4,
+      ),
       body: SafeArea(
         child: Center(
           child: Padding(
@@ -64,9 +71,9 @@ class _RandomUserScreenState extends State<RandomUserScreen> {
                               borderRadius: BorderRadius.circular(20),
                               boxShadow: [
                                 BoxShadow(
-                                  color: Colors.black.withOpacity(0.1),
-                                  blurRadius: 10,
-                                  offset: const Offset(0, 5),
+                                  color: Colors.black.withOpacity(0.08),
+                                  blurRadius: 8,
+                                  offset: const Offset(0, 4),
                                 ),
                               ],
                             ),
@@ -74,12 +81,11 @@ class _RandomUserScreenState extends State<RandomUserScreen> {
                               borderRadius: BorderRadius.circular(20),
                               child: Column(
                                 children: [
-                                  // Top section with image & name
+                                  // Top section
                                   Container(
                                     width: double.infinity,
-                                    color: const Color.fromARGB(116, 6, 0, 120),
-                                    padding:
-                                        const EdgeInsets.symmetric(vertical: 20),
+                                    color: const Color(0xFF607D8B), // Soft blue-grey
+                                    padding: const EdgeInsets.symmetric(vertical: 20),
                                     child: Column(
                                       children: [
                                         CircleAvatar(
@@ -100,14 +106,13 @@ class _RandomUserScreenState extends State<RandomUserScreen> {
                                     ),
                                   ),
 
-                                  // Bottom section with details
+                                  // Bottom section
                                   Container(
                                     width: double.infinity,
-                                    color: const Color.fromARGB(255, 147, 194, 255),
+                                    color: Colors.white,
                                     padding: const EdgeInsets.all(20),
                                     child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
                                         InfoTile(
                                           icon: Icons.email,
@@ -133,14 +138,13 @@ class _RandomUserScreenState extends State<RandomUserScreen> {
 
                           const SizedBox(height: 20),
 
-                          // New User Button
                           ElevatedButton.icon(
                             onPressed: fetchRandomUser,
                             icon: const Icon(Icons.refresh),
                             label: const Text("Load Another User"),
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: const Color.fromARGB(255, 14, 9, 141),
-                              foregroundColor: const Color.fromARGB(255, 203, 211, 216),
+                              backgroundColor: const Color(0xFF00897B), // Teal
+                              foregroundColor: Colors.white,
                               padding: const EdgeInsets.symmetric(
                                   horizontal: 30, vertical: 14),
                               shape: RoundedRectangleBorder(
@@ -158,7 +162,6 @@ class _RandomUserScreenState extends State<RandomUserScreen> {
   }
 }
 
-// Info tile widget with icon + label
 class InfoTile extends StatelessWidget {
   final IconData icon;
   final String label;
@@ -170,12 +173,12 @@ class InfoTile extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(14),
       decoration: BoxDecoration(
-        color: const Color.fromARGB(255, 44, 149, 219),
+        color: const Color(0xFFECEFF1), // Soft light grey-blue
         borderRadius: BorderRadius.circular(12),
       ),
       child: Row(
         children: [
-          Icon(icon, size: 20, color: Colors.grey[700]),
+          Icon(icon, size: 20, color: Colors.teal[700]),
           const SizedBox(width: 10),
           Expanded(
             child: Text(

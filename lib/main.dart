@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:randomuser/randomuserscreen.dart';
-
+//zimah
 void main() {
   runApp(const MainApp());
 }
@@ -29,7 +29,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(const Duration(seconds: 10), () {
+    Future.delayed(const Duration(seconds: 6), () {
       if (mounted) {
         Navigator.pushReplacement(
           context,
@@ -42,6 +42,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 7, 73, 60),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -49,18 +50,12 @@ class _SplashScreenState extends State<SplashScreen> {
             // Logo image
             Image.asset(
               'assets/images/logo.png',
-              width: 200,
+              width: 350,
               height: 300,
             ),
             SizedBox(height: 20),
             // App title
-            Text(
-              'viewer',
-              style: TextStyle(
-                fontSize: 30,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
+           
           ],
         ),
       ),
